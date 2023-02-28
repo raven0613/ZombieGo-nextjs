@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  zombiego_nextjs:
+    ports:
+      - 3000:3000
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+      - /app/node_modules
+      - /app/.next
+      # - ./pages:/usr/src/app/pages
+      # - ./public:/usr/src/app/public
+      # - ./styles:/usr/src/app/styles
+      # - ./components:/usr/src/app/components
